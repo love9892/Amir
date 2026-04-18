@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  :root {
+    --bg-color: #050505;
+    --surface-color: #121212;
+    --accent-color: #00ffa3;
+    --accent-glow: rgba(0, 255, 163, 0.25);
+    --text-main: #ffffff;
+    --text-dim: #888888;
+    --border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    @apply bg-[#050505] text-white antialiased selection:bg-[#00ffa3]/30;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom scrollbar for mobile feel */
+  ::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-[#121212] backdrop-blur-md border border-white/5;
+  }
+}
+
+/* Premium Typography refinements */
+h1, h2, h3, h4 {
+  @apply tracking-tight font-medium; /* Switched from bold/tighter to medium/tight for minimalism */
+}
+
+/* Markdown styling */
+.prose {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.prose strong {
+  color: #fff !important;
+}
+
+.prose code {
+  @apply bg-white/5 px-1.5 py-0.5 rounded text-[0.9em] font-mono text-[#00ffa3];
+}
+
+.prose pre {
+  @apply bg-[#121212] border border-white/5 rounded-xl p-4 my-4 overflow-x-auto;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-white leading-relaxed;
+}
+

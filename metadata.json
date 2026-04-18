@@ -1,0 +1,13 @@
+{
+  "name": "MR AMIRAI",
+  "description": "A premium AI-powered mobile web application with a modern dark UI, featuring real-time chat, voice interaction, image generation, and data analysis.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "AI Chat",
+    "Voice Interaction",
+    "Image Generation",
+    "Data Analysis"
+  ]
+}
